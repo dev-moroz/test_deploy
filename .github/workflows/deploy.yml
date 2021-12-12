@@ -26,4 +26,6 @@ jobs:
       - run: npm run build
       # Deploy
       - run: cd dist && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . root@185.244.172.89:/var/www/html/deploy_test/
+        shell: bash
+        run: echo "yes"
       # - run: cd dist && rsync --archive --compress --delete . root@185.244.172.89:/var/www/html/deploy_test/
