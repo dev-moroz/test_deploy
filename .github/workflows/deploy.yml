@@ -13,7 +13,7 @@ jobs:
         node-version: [16.x]
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
       # Setup key
@@ -25,4 +25,5 @@ jobs:
       - run: npm ci
       - run: npm run build
       # Deploy
-      - run: cd dist && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . root@185.244.172.89:/var/www/html/deploy_test/
+      #- run: cd dist && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . root@185.244.172.89:/var/www/html/deploy_test/
+      - run: cd dist && rsync --archive --compress --delete . root@185.244.172.89:/var/www/html/deploy_test/
