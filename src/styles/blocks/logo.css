@@ -17,7 +17,7 @@
 }
 
 .logo__left {
-    /* fill: var(--brown); */
+    fill: var(--brown);
 }
 
 .logo__right {
