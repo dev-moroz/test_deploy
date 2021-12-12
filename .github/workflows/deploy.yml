@@ -1,9 +1,10 @@
-name: Deploy
+name: Main
 
 on:
+  pull_request:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   deploy:
