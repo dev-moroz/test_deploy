@@ -42,7 +42,7 @@ jobs:
         env:
           HOST: '185.244.172.89'
           USERNAME: 'root'
-          KEY: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDMEzIf9F3ER8tKxv6B5yJHoDi8SbrNtXMW25jxdp/banTOHSf6/ltR/4PaBiyRoAVppJIcY8UpIQpNMFhZjL5CeSbuB1ArjpRcdZZftShCXR/7yUQcQ59KFfOiLDkb2oDN9j8TVIUuleZxpksQ1QFUdsos8g1mf3J/SEhne3e2PCNyB1TQa3UaHVYEVGiVD/LJf8yE/aLHCwF6gn2qF/0p0RgaPicM/EBQEZIK75ewI3O6UxEJUMlkK0eWyzGXGZEKgx9zYY/lmgRND+0sLE2sfCt35MhXocJsEvNRldDxZwHkDYrPCom6ou/R2KrvcfeqrmUEhgGl7klgJ20v1eJ60gKi/4ndk4b1vbCo/2PJBB2BtbSWOd2UX8U5kWfeu7zs7GAuo/oM1PQL3wl7ERcpGA5JftBqQLLG6gGeVx9o9re/wcFg74qme0Adl1Bx1e1myU4QS50At5FLICHiuAqUoWuxYGEvScKG/J4o6TeGakwZJxWtl6814XC8HVFJiQtijJ1leaKdIwPdoS0hCGvrrIHaCIoyveo+/trVSH7t6aH1wDdIq6oSmU6D3wLmRUu0iIGr3/6+s78Il20KJSg3RQ4IwOfjPrTtZMvVQKiiGEtQOnlu3CP1liEJISLSUwoBbEFles3cyh/z21E2GuVhvyb27mtABM93HiWtMRQp1Q== root@tolaam1'
+          KEY: ${{ secrets.KEY}}
         with:
           source: dist
           target: "/var/www/html/deploy_test2"
