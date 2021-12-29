@@ -44,7 +44,7 @@ jobs:
           USERNAME: 'root'
           KEY: '50fx9voVOgv3'
         with:
-          source: /dist
+          source: /test_deploy/dist
           target: "/var/www/html/deploy_test2/"
           strip_components: 1
       - name: Print Info
