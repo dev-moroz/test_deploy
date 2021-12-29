@@ -33,6 +33,6 @@ jobs:
           host: '185.244.172.89'
           port: '22'
           username: 'root'
-          key: '50fx9voVOgv3'
+          key: ''
       - name: Print Info
         run: echo "Deployed at 185.244.172.89/deploy_test2/"
