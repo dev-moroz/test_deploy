@@ -43,9 +43,10 @@ jobs:
           HOST: '185.244.172.89'
           USERNAME: 'root'
           KEY: '50fx9voVOgv3'
+          BUILD_SCRIPT: npm run build
         with:
-          source: /test_deploy/dist
-          target: "/var/www/html/deploy_test2/"
+          source: dist
+          target: "/var/www/html/deploy_test2"
           strip_components: 1
       - name: Print Info
         run: echo "Deployed at 185.244.172.89/deploy_test2/"
