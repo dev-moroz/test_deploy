@@ -24,6 +24,18 @@ jobs:
       - name: Install Dependencies
         run: npm i
       # Собираем приложение
+      - name: ssh
+        # Authorize SSH Host
+        run: mkdir -p /root/.ssh && \
+        run: chmod 0700 /root/.ssh && \
+        run: ssh-keyscan github.com > /root/.ssh/known_hosts
+
+      # Add the keys and set permissions
+        run: echo "$ssh_prv_key" > /root/.ssh/id_rsa && \
+        run: echo "$ssh_pub_key" > /root/.ssh/id_rsa.pub && \
+        run: chmod 600 /root/.ssh/id_rsa && \
+        run: chmod 600 /root/.ssh/id_rsa.pub
+        
       - name: Build Appliction
         run: npm run build
       # Доставляем собранное приложение на сервер
